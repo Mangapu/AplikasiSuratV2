@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Surat Dinas - Kecamatan Masama</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-envelope-open-text text-2xl"></i>
+                <span class="text-xl font-bold">Sistem Surat Dinas</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-200">Beranda</a>
+                <a href="surat_masuk.html" class="hover:text-blue-200">Surat Masuk</a>
+                <a href="surat_keluar.html" class="hover:text-blue-200">Surat Keluar</a>
+            </div>
+            <button class="md:hidden text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-[url('https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg')] bg-cover bg-center h-96 flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 drop-shadow-lg [text-shadow:_0_2px_4px_rgb(0_0_0_/_50%)]">Sistem Penomoran Surat Dinas</h1>
+            <p class="text-xl text-blue-100 font-medium mb-8 drop-shadow-md [text-shadow:_0_1px_2px_rgb(0_0_0_/_40%)]">Kecamatan Masama - Kabupaten Banggai</p>
+            <div class="flex justify-center space-x-4">
+                <a href="surat_masuk.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition">Surat Masuk</a>
+                <a href="surat_keluar.html" class="bg-blue-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-800 transition">Surat Keluar</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Info -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-blue-600 mb-4">
+                    <i class="fas fa-inbox text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Surat Masuk</h3>
+                <p class="text-gray-600">Sistem pencatatan surat masuk dengan penomoran otomatis</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-green-600 mb-4">
+                    <i class="fas fa-paper-plane text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Surat Keluar</h3>
+                <p class="text-gray-600">Sistem pencatatan surat keluar dengan penomoran otomatis</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="text-yellow-600 mb-4">
+                    <i class="fas fa-search text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Pencarian</h3>
+                <p class="text-gray-600">Fitur pencarian surat berdasarkan nomor, tanggal, atau perihal</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script_fixed_v2.js"></script>
+    
+    <footer class="bg-blue-600 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>Aplikasi Penomoran Surat Dinas v1.0</p>
+            <p class="text-sm mt-1">Dibuat oleh Pedry Lengeh</p>
+        </div>
+    </footer>
+</body>
+</html>
