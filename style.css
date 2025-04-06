@@ -1,0 +1,163 @@
+/* Custom styles to complement Tailwind */
+
+/* Print-specific styles */
+@media print {
+    nav, button {
+        display: none !important;
+    }
+    
+    body {
+        padding: 0;
+        font-size: 12pt;
+        background: white;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+}
+
+/* Animation for notifications */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.notification {
+    animation: slideIn 0.3s ease-out, fadeOut 0.5s ease-in 2.5s forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Custom form focus styles */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    border-color: #3b82f6;
+}
+
+/* Custom transition for buttons */
+.btn-transition {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom badge styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.badge-primary {
+    color: white;
+    background-color: #3b82f6;
+}
+
+.badge-success {
+    color: white;
+    background-color: #10b981;
+}
+
+/* Custom table row hover effect */
+.table-row-hover:hover {
+    background-color: rgba(59, 130, 246, 0.05);
+}
+
+/* Numbering mode toggle button */
+.toggle-btn {
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.toggle-btn-auto {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+.toggle-btn-manual {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+/* Custom modal backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Custom modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 1001;
+    max-width: 90%;
+    width: 500px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .modal {
+        width: 95%;
+        padding: 1rem;
+    }
+}
